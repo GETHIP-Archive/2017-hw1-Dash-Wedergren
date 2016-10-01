@@ -1,24 +1,36 @@
 function problemOne() {
   //Get all the numbers from the form.
-  let num1 = parseFloat(document.getElementById('num1').value);
-
-  //Find the average, not including the lowest score.
-
-  //Print it to the console.
-  console.log(average);
+  var all = [];
+  var total = 0;
+  for(i=0;i<6;i++){
+    all[i] = parseFloat($('#num'+(i+1)).val());
+  }
+  let min = findMin(all[0],all[1],all[2],all[3],all[4],all[5]);
+  for(i=0;i<6;i++){
+    if(all[i] == min){
+      all.splice(i, 1);
+    }
+  }
+  all.forEach(function(current){
+    total += current;
+  });
+  console.log(total/5);
 }
 
 function problemTwo() {
   //Get all the letter grades from the form.
-  let grade1 = document.getElementById('grade1').value;
+  var grades = [];
+  for(i=0;i<6;i++){
+    grades[i] = $('#grade'+(i+1)).val();
+  }
+  var gpa = findGPA(grades);
+  console.log("GPA: " + gpa);
 
-  //Compute the GPA.
-
-  //Print it to the console.
-
-  //If it is 3.0 or above, turn the div with id="box" green. Otherwise, turn it red.
-  // document.getElementById("box").style.backgroundColor = "orange";
-
+  if(gpa > 3){
+    document.getElementById("box").style.backgroundColor = "green";
+  }else{
+    document.getElementById("box").style.backgroundColor = "red";
+  }
 }
 
 function findMin(num1, num2, num3, num4, num5, num6) {
@@ -34,8 +46,8 @@ function findMin(num1, num2, num3, num4, num5, num6) {
   return list[minimum];
 }
 
-function findGPA(grade1, grade2, grade3, grade4, grade5, grade6) {
-  let list = [grade1, grade2, grade3, grade4, grade5, grade6];
+function findGPA(grades) {
+  let list = grades;
 
   let sum = 0;
 

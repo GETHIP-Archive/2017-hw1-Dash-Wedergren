@@ -3,6 +3,7 @@
   <head>
     <title>GET HIP Week One Challenge</title>
     <link rel="stylesheet" href="styles.css">
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
   </head>
   <body>
     <h1>GET HIP Week One Assignment</h1>
@@ -12,14 +13,14 @@
       <p>Enter each of your 6 test grades in the number inputs below, and click "Find Your Test Grade" to run problemOne() and print your test grade to the console.</p>
       <form>
         <div class="row">
-          <div class="col-md-2"><input type="number" id="num1" class="form-control"></div>
-          <div class="col-md-2"><input type="number" id="num2" class="form-control"></div>
-          <div class="col-md-2"><input type="number" id="num3" class="form-control"></div>
-          <div class="col-md-2"><input type="number" id="num4" class="form-control"></div>
-          <div class="col-md-2"><input type="number" id="num5" class="form-control"></div>
-          <div class="col-md-2"><input type="number" id="num6" class="form-control"></div>
+          <div class="col-md-2"><input type="number" value="1" id="num1" class="form-control"></div>
+          <div class="col-md-2"><input type="number" value="2" id="num2" class="form-control"></div>
+          <div class="col-md-2"><input type="number" value="2" id="num3" class="form-control"></div>
+          <div class="col-md-2"><input type="number" value="2" id="num4" class="form-control"></div>
+          <div class="col-md-2"><input type="number" value="2" id="num5" class="form-control"></div>
+          <div class="col-md-2"><input type="number" value="2" id="num6" class="form-control"></div>
         </div>
-        <button onclick="problemOne(); return false;" class="btn btn-default">Find Your Test Grade</button>
+        <button class="button" onclick="problemOne(); return false" class="btn btn-default">Find Your Test Grade</button>
       </form>
       <h3>Bonus:</h3>
       <p>Use only one text input, and enable users to input as many test scores as they want, separated by commas. Take the average of all the test scores except the lowest.</p>
@@ -62,14 +63,14 @@
       <p>Enter each of your 6 letter grades in the input boxes below, and click "Find Your GPA" to run problemTwo() and print your GPA to the console.</p>
       <form>
         <div class="row">
-          <div class="col-md-2"><input type="text" id="grade1" class="form-control"></div>
-          <div class="col-md-2"><input type="text" id="grade2" class="form-control"></div>
-          <div class="col-md-2"><input type="text" id="grade3" class="form-control"></div>
-          <div class="col-md-2"><input type="text" id="grade4" class="form-control"></div>
-          <div class="col-md-2"><input type="text" id="grade5" class="form-control"></div>
-          <div class="col-md-2"><input type="text" id="grade6" class="form-control"></div>
+          <div class="col-md-2"><input type="text" id="grade1" value="A" class="form-control"></div>
+          <div class="col-md-2"><input type="text" id="grade2" value="A" class="form-control"></div>
+          <div class="col-md-2"><input type="text" id="grade3" value="A" class="form-control"></div>
+          <div class="col-md-2"><input type="text" id="grade4" value="A" class="form-control"></div>
+          <div class="col-md-2"><input type="text" id="grade5" value="A" class="form-control"></div>
+          <div class="col-md-2"><input type="text" id="grade6" value="A" class="form-control"></div>
         </div>
-        <button onclick="problemTwo(); return false;" class="btn btn-default">Find Your GPA</button>
+        <button class="button" onclick="problemTwo(); return false;" class="btn btn-default">Find Your GPA</button>
       </form>
       <div id="box" class="gradeBox"></div>
       <h3>Bonus:</h3>

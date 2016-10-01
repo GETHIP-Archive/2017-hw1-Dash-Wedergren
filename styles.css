@@ -9,3 +9,8 @@ body {
   background-color: white;
   margin: 1em 0;
 }
+
+.button {
+  width: 173px;
+  background-color: red;
+}
